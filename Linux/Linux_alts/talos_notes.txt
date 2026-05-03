@@ -1,0 +1,153 @@
+HOW TO RUN TALOS LINUX (PRACTICAL FLOW)
+---------------------------------------
+
+IMPORTANT CONCEPT:
+- No SSH
+- No shell login
+- No package manager
+- Everything is API controlled
+
+You manage it from your laptop using:
+talosctl (official CLI tool)
+
+------------------------------------------------------------
+
+1. GET TALOS TOOLS
+------------------------------------------------------------
+Install CLI on your machine:
+
+- talosctl (main management tool)
+- kubectl (for Kubernetes after cluster is up)
+
+------------------------------------------------------------
+
+2. BOOTSTRAP NODES
+------------------------------------------------------------
+
+You start Talos nodes (VMs or bare metal):
+
+- 1 control plane node
+- 1 or more worker nodes
+
+Deployment methods:
+- local VM (QEMU / VirtualBox / Proxmox)
+- cloud instances (AWS, GCP, Azure)
+- bare metal
+
+Nodes boot into Talos image (ISO or disk image)
+
+At this point:
+- OS is running
+- BUT not configured yet
+
+------------------------------------------------------------
+
+3. GENERATE CONFIGURATION
+------------------------------------------------------------
+
+On your workstation:
+
+talosctl gen config cluster-name https://CONTROL_PLANE_IP:6443
+
+This creates:
+- controlplane.yaml
+- worker.yaml
+- talosconfig
+
+These define everything (no manual OS setup)
+
+------------------------------------------------------------
+
+4. APPLY CONFIG TO NODES
+------------------------------------------------------------
+
+You push config to machines:
+
+talosctl apply-config --insecure --nodes NODE_IP --file controlplane.yaml
+
+Do same for workers:
+
+talosctl apply-config --insecure --nodes NODE_IP --file worker.yaml
+
+Now nodes become fully configured automatically
+
+------------------------------------------------------------
+
+5. BOOTSTRAP KUBERNETES CLUSTER
+------------------------------------------------------------
+
+On first control plane node:
+
+talosctl bootstrap --nodes CONTROL_PLANE_IP --endpoints CONTROL_PLANE_IP
+
+This starts Kubernetes control plane automatically
+
+------------------------------------------------------------
+
+6. GET KUBECONFIG
+------------------------------------------------------------
+
+talosctl kubeconfig
+
+Now you can use:
+
+kubectl get nodes
+
+Cluster is live
+
+------------------------------------------------------------
+
+HOW YOU MANAGE SYSTEM AFTER THIS
+------------------------------------------------------------
+
+Instead of SSH:
+
+YOU USE:
+
+talosctl:
+- inspect system logs
+- reboot nodes
+- debug failures
+- upgrade OS
+
+kubectl:
+- manage workloads
+- deploy apps
+- scale services
+
+------------------------------------------------------------
+
+IMPORTANT DIFFERENCE VS NORMAL LINUX
+------------------------------------------------------------
+
+Traditional Linux:
+- SSH into server
+- install packages
+- edit config files manually
+
+Talos:
+- no login
+- no shell
+- no package installs
+- everything is declarative API state
+
+------------------------------------------------------------
+
+WHERE TALOS IS USED
+------------------------------------------------------------
+
+- Kubernetes security clusters
+- Zero trust environments
+- High security infrastructure
+- Cloud native platforms replacing VM-based sysadmin
+
+------------------------------------------------------------
+
+SUMMARY
+
+Talos is NOT a Linux server you manage.
+
+It is:
+- a Kubernetes node operating system
+- controlled entirely from outside via API
+- designed to remove human access to OS layer
