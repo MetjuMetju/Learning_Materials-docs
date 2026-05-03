@@ -1,0 +1,86 @@
+# check virtualization support
+egrep -c '(vmx|svm)' /proc/cpuinfo
+
+# install kvm tools (Ubuntu)
+sudo apt update
+sudo apt install -y qemu-kvm libvirt-daemon-system libvirt-clients virtinst bridge-utils
+
+# download talos ISO
+curl -Lo talos.iso https://github.com/siderolabs/talos/releases/latest/download/metal-amd64.iso
+
+# create VM (KVM example)
+virt-install \
+  --name talos-vm \
+  --ram 4096 \
+  --vcpus 2 \
+  --disk size=20 \
+  --os-variant generic \
+  --cdrom talos.iso \
+  --network network=default \
+  --graphics none \
+  --console pty,target_type=serial
+
+# after boot, find VM IP (on host)
+virsh net-dhcp-leases default
+
+# install talosctl on host
+curl -Lo talosctl https://github.com/siderolabs/talos/releases/latest/download/talosctl-linux-amd64
+chmod +x talosctl
+sudo mv talosctl /usr/local/bin/
+
+# generate config
+talosctl gen config talos-cluster https://<VM_IP>:6443
+
+# apply config
+talosctl apply-config --insecure -n <VM_IP> --file controlplane.yaml
+
+# bootstrap cluster
+talosctl bootstrap -n <VM_IP>
+
+# get kubeconfig
+talosctl kubeconfig -n <VM_IP>
+
+# check nodes (kubectl on host)
+kubectl get nodes
+
+# deploy CNI (minimal networking)
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+
+# verify cluster
+kubectl get pods -A
+
+
+
+# download talosctl
+curl -Lo talosctl https://github.com/siderolabs/talos/releases/latest/download/talosctl-linux-amd64
+chmod +x talosctl
+sudo mv talosctl /usr/local/bin/
+
+# download talos image (ISO)
+curl -Lo talos.iso https://github.com/siderolabs/talos/releases/latest/download/metal-amd64.iso
+
+# write ISO to USB (replace sdX)
+sudo dd if=talos.iso of=/dev/sdX bs=4M status=progress oflag=sync
+
+# boot machine from USB
+
+# generate config (replace IP)
+talosctl gen config talos-cluster https://192.168.1.10:6443
+
+# apply config to node
+talosctl apply-config --insecure -n 192.168.1.10 --file controlplane.yaml
+
+# bootstrap cluster
+talosctl bootstrap -n 192.168.1.10
+
+# get kubeconfig
+talosctl kubeconfig -n 192.168.1.10
+
+# install CNI (flannel minimal)
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
+
+# check nodes
+kubectl get nodes
+
+# check pods
+kubectl get pods -A
