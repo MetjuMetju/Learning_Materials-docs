@@ -1,0 +1,54 @@
+OPENSHIFT NOTES
+===============
+
+OFFICIAL URL
+-------------
+https://www.redhat.com/en/technologies/cloud-computing/openshift
+
+VENDOR
+------
+Red Hat (IBM)
+
+TYPE
+----
+Container orchestration platform (Kubernetes-based)
+
+MAIN PURPOSE
+------------
+- Deploy and manage containerized applications
+- Provide enterprise Kubernetes platform
+- Automate application lifecycle (build, deploy, scale)
+
+KEY FEATURES
+------------
+- Built on Kubernetes
+- Integrated CI/CD pipelines
+- Container registry support
+- Auto-scaling and self-healing
+- Security policies and role-based access control
+- Web console and CLI tools (oc)
+
+COMMON USE CASES
+-----------------
+- Cloud-native applications
+- Microservices architecture
+- Enterprise container platforms
+- Hybrid and multi-cloud deployments
+
+CLI TOOL
+--------
+oc (OpenShift CLI)
+- manage projects
+- deploy applications
+- inspect cluster resources
+
+RELATED TECHNOLOGIES
+---------------------
+- Kubernetes
+- Docker / container runtimes
+- Helm charts
+- CI/CD pipelines
+
+BASIC IDEA
+----------
+OpenShift is an enterprise Kubernetes platform that simplifies building, deploying, and managing containerized applications across cloud and on-prem environments.
