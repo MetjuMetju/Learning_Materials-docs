@@ -1,0 +1,104 @@
+ANSIBLE SETUP FOR RED HAT ENTERPRISE LINUX (RHEL) ENVIRONMENT
+
+1. PREREQUISITES
+- install ansible on control node (RHEL/CentOS/Ubuntu)
+- ensure SSH key-based authentication to RHEL hosts
+- Python installed on RHEL nodes (python3 preferred)
+- sudo access configured for remote user
+
+2. INVENTORY STRUCTURE
+- define groups:
+  [rhel_servers]
+  [web_servers]
+  [db_servers]
+  [all:vars]
+- assign IPs or hostnames
+- define ansible_user and privilege escalation method
+
+3. ANSIBLE CONFIGURATION
+- ansible.cfg settings:
+  inventory = ./inventory
+  remote_user = your_user
+  become = True
+  become_method = sudo
+  host_key_checking = False
+
+4. INITIAL SYSTEM PREPARATION ROLE
+- update all packages:
+  dnf update -y
+- install basic tools:
+  vim, curl, wget, net-tools, git
+- configure time sync (chrony)
+
+5. USER AND SECURITY HARDENING
+- disable root SSH login
+- enforce SSH key authentication only
+- configure sudo users properly
+- set password policies (PAM / pwquality)
+
+6. FIREWALL CONFIGURATION
+- enable firewalld
+- open only required ports:
+  SSH (22)
+  application-specific ports
+- deny all by default
+
+7. SELINUX CONFIGURATION
+- ensure SELinux is enforcing mode
+- manage contexts for web/app services if needed
+- avoid disabling SELinux in production
+
+8. SYSTEM TUNING
+- set limits:
+  nofile, nproc
+- kernel tuning via sysctl:
+  net.ipv4.ip_forward
+  fs.file-max
+- disable swap if required for performance systems
+
+9. SOFTWARE MANAGEMENT
+- use dnf module streams where needed
+- install EPEL repository if required
+- define reusable package roles
+
+10. SERVICE MANAGEMENT
+- use systemd modules in Ansible:
+  enable services
+  start services
+  restart handlers on config change
+
+11. LOGGING AND MONITORING
+- configure rsyslog forwarding (optional)
+- install auditd for security auditing
+- optionally deploy Prometheus node exporter
+
+12. ROLE-BASED STRUCTURE (BEST PRACTICE)
+- roles/
+  common/
+  hardening/
+  webserver/
+  database/
+- tasks separated into:
+  install.yml
+  config.yml
+  service.yml
+  security.yml
+
+13. PLAYBOOK EXECUTION FLOW
+- run common role first
+- apply hardening role
+- deploy application-specific roles
+- validate services and ports
+
+14. VALIDATION STEPS
+- check system uptime and kernel version
+- verify firewall rules
+- confirm SELinux status
+- test SSH access and sudo rights
+- validate running services
+
+15. OPTIONAL ENTERPRISE FEATURES
+- integrate with Red Hat Satellite
+- enable subscription-manager registration
+- configure centralized logging (ELK or Splunk)
+- integrate with LDAP/Active Directory authentication

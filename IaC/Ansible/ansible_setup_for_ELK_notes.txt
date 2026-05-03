@@ -1,0 +1,103 @@
+ANSIBLE SETUP FOR ELK STACK (ELASTICSEARCH + LOGSTASH + KIBANA)
+
+1. PREREQUISITES
+- install ansible on control node
+- ensure SSH access to target servers with key authentication
+- python installed on all managed nodes
+- define inventory file with elk nodes:
+  [elasticsearch]
+  [logstash]
+  [kibana]
+
+2. BASIC INVENTORY STRUCTURE
+- group servers by role:
+  elasticsearch nodes
+  logstash nodes
+  kibana nodes (or single-node all-in-one lab setup)
+- define variables in group_vars or host_vars
+
+3. ANSIBLE CONFIGURATION
+- set ansible.cfg:
+  host_key_checking = False
+  inventory = ./inventory
+  remote_user = your_user
+  private_key_file = ~/.ssh/id_rsa
+
+4. JAVA INSTALLATION
+- install OpenJDK (required for Elasticsearch)
+- ensure correct version (java 11 or 17 depending on ELK version)
+
+5. ELASTICSEARCH SETUP
+- install Elasticsearch package from official repo
+- configure:
+  cluster.name
+  node.name
+  network.host = 0.0.0.0 (or private IP only)
+  discovery.type = single-node (for lab) or cluster discovery
+- enable systemd service
+- set vm.max_map_count = 262144
+
+6. LOGSTASH SETUP
+- install Logstash package
+- configure pipeline:
+  input (beats, syslog, tcp)
+  filter (grok, mutate, date parsing)
+  output (elasticsearch)
+- enable service and ensure pipeline loads correctly
+
+7. KIBANA SETUP
+- install Kibana package
+- configure:
+  server.host = 0.0.0.0 (or internal IP only)
+  elasticsearch.hosts = http://elasticsearch:9200
+- enable systemd service
+
+8. SYSTEM TUNING
+- increase file descriptors:
+  nofile = 65536
+- disable swap if needed
+- kernel settings:
+  vm.max_map_count = 262144
+
+9. SECURITY CONFIGURATION
+- enable basic authentication (x-pack or nginx reverse proxy)
+- restrict access to Kibana via firewall or reverse proxy
+- allow Elasticsearch only from Logstash/Kibana nodes
+- disable public internet exposure in production
+
+10. FIREWALL RULES
+- Elasticsearch: 9200 only internal access
+- Kibana: 5601 restricted access
+- Logstash: 5044 open only for beats sources if needed
+
+11. ANSIBLE ROLE STRUCTURE (BEST PRACTICE)
+- roles/
+  elasticsearch/
+  logstash/
+  kibana/
+  common/
+- tasks/
+  install.yml
+  config.yml
+  service.yml
+- handlers/
+  restart services
+
+12. PLAYBOOK EXECUTION FLOW
+- run common role first (users, java, sysctl)
+- deploy Elasticsearch cluster
+- deploy Logstash pipelines
+- deploy Kibana UI
+- verify all services status
+
+13. VALIDATION STEPS
+- check cluster health (green/yellow)
+- verify logs flowing into Elasticsearch
+- test Kibana dashboard access
+- validate Logstash input/output pipelines
+
+14. OPTIONAL ENHANCEMENTS
+- install Filebeat on client machines
+- enable SSL/TLS between components
+- add monitoring (Metricbeat)
+- add alerting via Kibana or ElastAlert
