@@ -1,0 +1,58 @@
+ELK STACK NOTES
+===============
+
+OFFICIAL URL
+-------------
+https://www.elastic.co/elastic-stack
+
+VENDOR
+------
+Elastic N.V.
+
+TYPE
+----
+Log management and observability platform
+
+MAIN PURPOSE
+------------
+- Collect, store, search, and visualize logs and metrics
+- Centralized logging for systems and applications
+- Real-time data analysis and monitoring
+
+COMPONENTS
+-----------
+ELK stands for:
+- Elasticsearch  = search and analytics engine
+- Logstash       = data processing pipeline
+- Kibana         = visualization dashboard
+
+OPTIONAL COMPONENT
+-------------------
+- Beats (lightweight data shippers like Filebeat, Metricbeat)
+
+KEY FEATURES
+------------
+- Full-text search over logs
+- Real-time dashboards and visualizations
+- Log aggregation from multiple sources
+- Scalable distributed storage (Elasticsearch)
+- Alerting and monitoring capabilities
+
+COMMON USE CASES
+-----------------
+- Centralized logging for servers and applications
+- Security event analysis (SIEM use cases)
+- Infrastructure monitoring
+- Debugging distributed systems
+- Performance analysis
+
+DATA FLOW
+---------
+1. Logs collected (Beats or direct input)
+2. Processed (Logstash optional)
+3. Stored (Elasticsearch)
+4. Visualized (Kibana)
+
+BASIC IDEA
+----------
+ELK Stack is a centralized logging and analytics platform used to collect logs from many systems, store them efficiently, and visualize them for monitoring and troubleshooting.
