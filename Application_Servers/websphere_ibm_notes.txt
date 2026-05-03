@@ -1,0 +1,52 @@
+WEBSPHERE NOTES
+================
+
+OFFICIAL URL
+-------------
+https://www.ibm.com/products/websphere-application-server
+
+VENDOR
+------
+IBM
+
+TYPE
+----
+Enterprise application server
+
+MAIN PURPOSE
+------------
+- Run Java enterprise applications (Java EE / Jakarta EE)
+- Host business web applications
+- Provide middleware layer between OS and applications
+
+KEY FEATURES
+------------
+- Application deployment and lifecycle management
+- High availability and clustering support
+- Security (authentication, authorization, SSL)
+- Transaction management
+- Load balancing support
+- Integration with enterprise systems
+
+COMMON USE CASES
+-----------------
+- Banking systems
+- Insurance platforms
+- Large enterprise web portals
+- Legacy Java enterprise applications
+
+ADMIN TOOLS
+-----------
+- WebSphere Admin Console (web UI)
+- wsadmin scripting (Jython / JACL)
+- Integration with IBM tools and monitoring systems
+
+RELATED COMPONENTS
+-------------------
+- WebSphere Application Server (WAS)
+- WebSphere Network Deployment (ND)
+- IBM HTTP Server (IHS)
+
+BASIC IDEA
+----------
+WebSphere is a middleware platform used to run and manage large scale Java enterprise applications in production environments.
