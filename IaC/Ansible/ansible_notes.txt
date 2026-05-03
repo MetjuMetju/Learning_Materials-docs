@@ -1,0 +1,57 @@
+ANSIBLE NOTES
+==============
+
+OFFICIAL URL
+-------------
+https://www.ansible.com
+https://docs.ansible.com
+
+VENDOR
+------
+Red Hat
+
+TYPE
+----
+Infrastructure automation and configuration management tool
+
+MAIN PURPOSE
+------------
+- Automate server configuration and deployment
+- Manage infrastructure as code
+- Run tasks on multiple systems without manual SSH login
+
+KEY FEATURES
+------------
+- Agentless (uses SSH, no client installation needed)
+- Simple YAML-based configuration (playbooks)
+- Idempotent operations (safe repeated execution)
+- Multi-node orchestration
+- Role-based reusable automation
+
+COMMON USE CASES
+-----------------
+- Server provisioning
+- Application deployment
+- Configuration management
+- Patch management
+- Cloud and infrastructure automation
+- Kubernetes and DevOps automation
+
+CORE CONCEPTS
+-------------
+- Inventory = list of managed servers
+- Playbook = automation script in YAML
+- Task = single action (install, copy, restart)
+- Module = built-in function (yum, apt, copy, service)
+- Role = reusable automation package
+
+HOW IT WORKS
+------------
+1. Define inventory (servers)
+2. Write playbook (tasks in YAML)
+3. Run ansible-playbook
+4. Ansible connects via SSH and executes tasks
+
+BASIC IDEA
+----------
+Ansible is a simple automation tool used to manage infrastructure and servers without installing agents, using human-readable YAML playbooks.
