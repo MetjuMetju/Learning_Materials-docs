@@ -1,0 +1,130 @@
+AZURE SETUP NOTES (INFRASTRUCTURE + SECURITY + AUTOMATION)
+
+1. PREREQUISITES
+- active Azure subscription
+- install Azure CLI
+- install Ansible on control node
+- create service principal for automation
+- ensure SSH key pair for VM access
+
+2. AUTHENTICATION SETUP
+- login using Azure CLI
+- create service principal:
+  az ad sp create-for-rbac
+- store:
+  client id
+  client secret
+  tenant id
+  subscription id
+
+3. RESOURCE GROUP DESIGN
+- create dedicated resource groups per environment:
+  dev
+  test
+  prod
+- use naming convention:
+  rg-project-env-region
+
+4. NETWORK ARCHITECTURE
+- create virtual network (VNet)
+- define subnets:
+  frontend
+  backend
+  management
+- assign private IP ranges properly
+- use network security groups (NSG)
+
+5. SECURITY BASELINE
+- deny all inbound traffic by default
+- allow only required ports:
+  SSH 22 (restricted IP)
+  HTTP 80
+  HTTPS 443
+- use Azure Bastion instead of public SSH when possible
+
+6. VIRTUAL MACHINES SETUP
+- define VM sizes based on workload
+- use managed disks
+- disable password login (SSH key only)
+- assign system managed identity if needed
+
+7. STORAGE CONFIGURATION
+- use managed disks for VMs
+- use storage accounts for logs and backups
+- enable encryption at rest (default)
+- restrict public access to storage accounts
+
+8. ANSIBLE INTEGRATION
+- install azure.azcollection
+- configure credentials via environment variables
+- use dynamic inventory plugin:
+  azure_rm
+
+9. ANSIBLE PLAYBOOK STRUCTURE
+- roles:
+  common
+  security
+  application
+- tasks:
+  create resource group
+  create vnet and subnets
+  create NSG rules
+  deploy VMs
+  configure OS
+
+10. LOAD BALANCING
+- use Azure Load Balancer for L4
+- use Application Gateway for L7
+- enable health probes
+- configure backend pools
+
+11. IDENTITY AND ACCESS MANAGEMENT
+- use RBAC roles:
+  reader
+  contributor
+  owner (restricted use)
+- assign least privilege access
+- integrate with Azure AD groups
+
+12. MONITORING AND LOGGING
+- enable Azure Monitor
+- use Log Analytics workspace
+- collect:
+  VM metrics
+  system logs
+  security logs
+
+13. BACKUP AND RECOVERY
+- enable Azure Backup for VMs
+- define backup policies
+- test restore procedures regularly
+
+14. SECURITY HARDENING
+- enable Microsoft Defender for Cloud
+- apply security recommendations
+- patch management via Azure Update Manager
+
+15. NETWORK SECURITY ADVANCED
+- use private endpoints for services
+- restrict public IP usage
+- implement VPN or ExpressRoute for hybrid setups
+
+16. COST MANAGEMENT
+- use tags:
+  project
+  owner
+  environment
+- monitor usage via Cost Management
+- set budgets and alerts
+
+17. VALIDATION STEPS
+- verify VM connectivity via SSH
+- check NSG rules
+- validate service availability
+- confirm monitoring data ingestion
+
+18. OPTIONAL ENTERPRISE FEATURES
+- use Azure Kubernetes Service (AKS)
+- integrate with Key Vault for secrets
+- use Terraform instead of or alongside Ansible
+- implement CI CD pipelines (Azure DevOps or GitHub Actions)
