@@ -1,6 +1,6 @@
 ### ISO/OSI Layers
 
-# mnemonic sentences:
+# mnemonic sentence:
 Please Deploy New Tools Safely Properly Always
 
 In the OSI reference model, the communications between a computing system are split into
