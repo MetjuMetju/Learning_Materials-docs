@@ -1,0 +1,5 @@
+site_name: Learning Materials
+site_url: https://metjumetju.github.io/Learning_Materials
+
+theme:
+  name: material
