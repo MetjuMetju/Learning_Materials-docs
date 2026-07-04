@@ -1,5 +1,13 @@
 site_name: Learning Materials Docs
 docs_dir: docs
+theme:
+  name: material
 plugins:
   - search
   - awesome-pages
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+extra_javascript:
+  - assets/js/k8s-builder.js
