@@ -1,0 +1,5 @@
+site_name: Learning Materials Docs
+docs_dir: docs
+plugins:
+  - search
+  - awesome-pages
