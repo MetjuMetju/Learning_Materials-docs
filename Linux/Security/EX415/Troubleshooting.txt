@@ -1,0 +1,68 @@
+# Troubleshooting
+
+## Official Documentation
+### Red Hat Documentation
+https://docs.redhat.com/
+
+
+# 1. SELinux
+## Investigate AVC Denials
+CODE:
+ausearch -m AVC
+sealert -a /var/log/audit/audit.log
+restorecon -Rv /var/www
+ENDCODE
+
+# 2. Firewalld
+## Verify Firewall
+CODE:
+firewall-cmd --state
+firewall-cmd --list-all
+firewall-cmd --list-all-zones
+ENDCODE
+
+# 3. Authentication
+## Verify Authentication
+CODE:
+systemctl status sssd
+id username
+getent passwd username
+ENDCODE
+
+# 4. Authorization
+## Verify sudo
+CODE:
+sudo -l
+visudo -c
+ENDCODE
+
+# 5. Auditd
+## Search Audit Events
+CODE:
+auditctl -l
+ausearch -m AVC
+aureport --summary
+ENDCODE
+
+# 6. OpenSCAP
+## Verify Compliance
+CODE:
+oscap --version
+oscap info /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml
+ENDCODE
+
+# 7. AIDE
+## Verify Integrity
+CODE:
+aide --check
+ENDCODE
+
+# 8. EX415 Practice
+## Common Exam Tasks
+- Diagnose SELinux issues.
+- Diagnose firewall problems.
+- Troubleshoot authentication.
+- Troubleshoot sudo.
+- Investigate audit logs.
+- Verify OpenSCAP scans.
+- Verify file integrity.

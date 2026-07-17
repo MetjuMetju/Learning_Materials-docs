@@ -1,0 +1,48 @@
+# AIDE
+
+## Official Documentation
+### AIDE Project
+https://github.com/aide/aide
+
+
+# 1. Installation and Verification
+## Install AIDE
+CODE:
+sudo dnf install -y aide
+aide --version
+ENDCODE
+
+# 2. Initialize Database
+## Create Baseline
+CODE:
+sudo aide --init
+sudo mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
+ENDCODE
+
+# 3. Integrity Checking
+## Run Scan
+CODE:
+sudo aide --check
+ENDCODE
+
+# 4. Update Baseline
+## Create New Database
+CODE:
+sudo aide --update
+sudo mv /var/lib/aide/aide.db.new.gz /var/lib/aide/aide.db.gz
+ENDCODE
+
+# 5. Troubleshooting
+## Verify Configuration
+CODE:
+cat /etc/aide.conf
+ls -l /var/lib/aide/
+ENDCODE
+
+# 6. EX415 Practice
+## Common Exam Tasks
+- Install AIDE.
+- Initialize database.
+- Detect file changes.
+- Update baseline.
+- Verify configuration.

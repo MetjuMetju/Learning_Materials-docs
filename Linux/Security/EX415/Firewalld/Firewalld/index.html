@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../../Cryptography/Cryptography/">
+      
+      
+        <link rel="next" href="../../OpenSCAP/OpenSCAP/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Learning Materials Docs</title>
+        <title>Firewalld - Learning Materials Docs</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -42,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/custom.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -61,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#firewalld" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -73,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../../../../.." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -93,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              Firewalld
             
           </span>
         </div>
@@ -171,7 +180,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../../../../.." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -189,7 +198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../../../.." class="md-nav__link">
         
   
   
@@ -213,18 +222,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -245,7 +256,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -260,18 +271,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -292,7 +305,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -307,18 +320,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1" id="__nav_2_1_1_label" tabindex="0">
@@ -339,7 +354,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_1_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -357,7 +372,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/all_URLs/" class="md-nav__link">
+      <a href="../../all_URLs/" class="md-nav__link">
         
   
   
@@ -432,7 +447,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/AIDE/" class="md-nav__link">
+      <a href="../../AIDE/" class="md-nav__link">
         
   
   
@@ -515,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Ansible_Security/Ansible_Security/" class="md-nav__link">
+      <a href="../../Ansible_Security/Ansible_Security/" class="md-nav__link">
         
   
   
@@ -598,7 +613,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Auditd/" class="md-nav__link">
+      <a href="../../Auditd/" class="md-nav__link">
         
   
   
@@ -681,7 +696,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Authentication/Authentication/" class="md-nav__link">
+      <a href="../../Authentication/Authentication/" class="md-nav__link">
         
   
   
@@ -764,7 +779,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Authorization/Authorization/" class="md-nav__link">
+      <a href="../../Authorization/Authorization/" class="md-nav__link">
         
   
   
@@ -847,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Cryptography/Cryptography/" class="md-nav__link">
+      <a href="../../Cryptography/Cryptography/" class="md-nav__link">
         
   
   
@@ -880,18 +895,20 @@
                 
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1_1_8" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1_1_8" id="__nav_2_1_1_8_label" tabindex="0">
@@ -912,7 +929,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_1_1_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1_1_8">
             <span class="md-nav__icon md-icon"></span>
             
@@ -927,10 +944,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Firewalld/Firewalld/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -946,6 +972,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1013,7 +1040,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/OpenSCAP/OpenSCAP/" class="md-nav__link">
+      <a href="../../OpenSCAP/OpenSCAP/" class="md-nav__link">
         
   
   
@@ -1096,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/SELinux/SELinux/" class="md-nav__link">
+      <a href="../../SELinux/SELinux/" class="md-nav__link">
         
   
   
@@ -1179,7 +1206,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/Linux/Security/EX415/Troubleshooting/" class="md-nav__link">
+      <a href="../../Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1248,6 +1275,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -1260,8 +1289,141 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="firewalld">Firewalld</h1>
+<details class="note">
+<summary>Firewalld</summary>
+<p><strong>Official Documentation</strong></p>
+<p><strong>Red Hat Security Hardening Guide</strong></p>
+<p><a href="https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/">https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/</a></p>
+<p><strong>Firewalld Project</strong></p>
+<p><a href="https://firewalld.org/">https://firewalld.org/</a></p>
+</details>
+<details class="note">
+<summary>1. Installation and Verification</summary>
+<p><strong>Install and Check Service</strong></p>
+<div class="highlight"><pre><span></span><code># Install Firewalld
+sudo dnf install -y firewalld
+
+# Enable service
+sudo systemctl enable --now firewalld
+
+# Verify service
+systemctl status firewalld
+
+# Verify firewall state
+firewall-cmd --state
+</code></pre></div>
+</details>
+<details class="note">
+<summary>2. Zones</summary>
+<p><strong>View Zones</strong></p>
+<div class="highlight"><pre><span></span><code>firewall-cmd --get-default-zone
+firewall-cmd --get-active-zones
+firewall-cmd --get-zones
+firewall-cmd --list-all
+</code></pre></div>
+<p><strong>Change Default Zone</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --set-default-zone=public
+</code></pre></div>
+</details>
+<details class="note">
+<summary>3. Services</summary>
+<p><strong>View Services</strong></p>
+<div class="highlight"><pre><span></span><code>firewall-cmd --list-services
+firewall-cmd --get-services
+</code></pre></div>
+<p><strong>Allow Services</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
+</code></pre></div>
+<p><strong>Remove Services</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --permanent --remove-service=http
+sudo firewall-cmd --reload
+</code></pre></div>
+</details>
+<details class="note">
+<summary>4. Ports</summary>
+<p><strong>Open Ports</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --add-port=8080/tcp
+sudo firewall-cmd --permanent --add-port=8443/tcp
+sudo firewall-cmd --reload
+</code></pre></div>
+<p><strong>Close Ports</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --permanent --remove-port=8080/tcp
+sudo firewall-cmd --reload
+</code></pre></div>
+<p><strong>View Ports</strong></p>
+<div class="highlight"><pre><span></span><code>firewall-cmd --list-ports
+</code></pre></div>
+</details>
+<details class="note">
+<summary>5. Rich Rules</summary>
+<p><strong>Create Rich Rule</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd \
+--permanent \
+--add-rich-rule=&#39;rule family=&quot;ipv4&quot; source address=&quot;192.168.1.0/24&quot; service name=&quot;ssh&quot; accept&quot;
+
+sudo firewall-cmd --reload
+</code></pre></div>
+<p><strong>List Rich Rules</strong></p>
+<div class="highlight"><pre><span></span><code>firewall-cmd --list-rich-rules
+</code></pre></div>
+</details>
+<details class="note">
+<summary>6. Runtime vs Permanent</summary>
+<p><strong>Runtime Configuration</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --add-service=http
+firewall-cmd --list-services
+</code></pre></div>
+<p><strong>Permanent Configuration</strong></p>
+<div class="highlight"><pre><span></span><code>sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+firewall-cmd --list-services
+</code></pre></div>
+</details>
+<details class="note">
+<summary>7. Troubleshooting</summary>
+<p><strong>Verify Configuration</strong></p>
+<div class="highlight"><pre><span></span><code>firewall-cmd --check-config
+firewall-cmd --list-all
+firewall-cmd --list-all-zones
+</code></pre></div>
+<p><strong>Service Status</strong></p>
+<div class="highlight"><pre><span></span><code>systemctl status firewalld
+journalctl -u firewalld
+</code></pre></div>
+</details>
+<details class="note">
+<summary>8. EX415 Practice</summary>
+<p><strong>Common Exam Tasks</strong></p>
+<ul>
+<li>Configure default zone.</li>
+<li>Enable and disable services.</li>
+<li>Open and close ports.</li>
+<li>Configure rich rules.</li>
+<li>Distinguish runtime and permanent configuration.</li>
+<li>Reload firewall configuration.</li>
+<li>Verify firewall rules.</li>
+</ul>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -1298,10 +1460,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": [], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
