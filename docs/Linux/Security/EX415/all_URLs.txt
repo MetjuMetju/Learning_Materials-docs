@@ -1,0 +1,81 @@
+## 01. SELinux
+  ##### SELinux Project Wiki
+  https://github.com/SELinuxProject/selinux/wiki
+
+  ##### SELinux Manual Pages
+  https://man7.org/linux/man-pages/man8/selinux.8.html
+
+## 02. Firewalld
+  ##### Firewalld Documentation
+  https://firewalld.org/documentation/
+
+  ##### Firewalld Manual Pages
+  https://firewalld.org/documentation/man-pages/
+
+## 03. Authentication
+  ##### Linux-PAM GitHub
+  https://github.com/linux-pam/linux-pam
+
+  ##### Linux-PAM Manual Pages
+  https://man7.org/linux/man-pages/man8/pam.8.html
+
+  ##### SSSD Documentation
+  https://sssd.io/docs/
+
+## 04. Authorization
+  ##### sudo Documentation
+  https://www.sudo.ws/docs/
+
+  ##### sudo Manual Pages
+  https://man7.org/linux/man-pages/man8/sudo.8.html
+
+  ##### SSSD Documentation
+  https://sssd.io/docs/
+
+## 05. Auditd
+  ##### Linux Audit Project
+  https://github.com/linux-audit/audit-documentation
+
+  ##### audit-userspace
+  https://github.com/linux-audit/audit-userspace
+
+## 06. OpenSCAP
+  ##### OpenSCAP Project
+  https://www.open-scap.org/
+
+  ##### SCAP Security Guide
+  https://www.open-scap.org/security-policies/scap-security-guide/
+
+  ##### OpenSCAP Documentation
+  https://www.open-scap.org/resources/documentation/
+
+## 07. AIDE
+  ##### AIDE Project
+  https://github.com/aide/aide
+
+  ##### AIDE Documentation
+  https://aide.github.io/
+
+## 08. Cryptography
+  ##### OpenSSL Documentation
+  https://docs.openssl.org/
+
+  ##### GnuPG Documentation
+  https://gnupg.org/documentation/
+
+## 09. Ansible Security
+  ##### Ansible Documentation
+  https://docs.ansible.com/ansible/latest/
+
+  ##### Ansible Collections
+  https://docs.ansible.com/ansible/latest/collections/
+
+  ##### RHEL System Roles
+  https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/automating_system_administration_by_using_rhel_system_roles/
+
+## 10. Troubleshooting
+  ##### Linux Manual Pages
+  https://man7.org/linux/man-pages/
+
+  ##### Red Hat Documentation
+  https://docs.redhat.com/

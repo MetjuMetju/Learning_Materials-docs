@@ -1,0 +1,56 @@
+# Ansible Security
+
+## Official Documentation
+### Ansible Documentation
+https://docs.ansible.com/ansible/latest/
+
+### RHEL System Roles
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html/automating_system_administration_by_using_rhel_system_roles/
+
+
+# 1. Installation
+## Install Ansible
+CODE:
+sudo dnf install -y ansible-core
+ansible --version
+ENDCODE
+
+# 2. Inventory
+## Verify Inventory
+CODE:
+cat inventory
+ansible all -m ping
+ENDCODE
+
+# 3. SELinux Automation
+## Apply SELinux Configuration
+CODE:
+ansible-playbook selinux.yml
+ENDCODE
+
+# 4. Firewalld Automation
+## Configure Firewall
+CODE:
+ansible-playbook firewalld.yml
+ENDCODE
+
+# 5. OpenSCAP Automation
+## Apply Remediation
+CODE:
+ansible-playbook openscap-remediation.yml
+ENDCODE
+
+# 6. Verification
+## Check Results
+CODE:
+ansible all -m setup
+ENDCODE
+
+# 7. EX415 Practice
+## Common Exam Tasks
+- Configure inventory.
+- Execute playbooks.
+- Configure SELinux.
+- Configure Firewalld.
+- Apply OpenSCAP remediation.
+- Verify configuration.

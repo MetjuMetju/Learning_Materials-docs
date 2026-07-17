@@ -1,0 +1,108 @@
+# OpenSCAP
+
+## Official Documentation
+### OpenSCAP Project
+https://www.open-scap.org/
+
+### Red Hat Security Hardening Guide
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/
+
+### SCAP Security Guide (SSG)
+https://www.open-scap.org/security-policies/scap-security-guide/
+
+
+# 1. Installation and Verification
+## Install OpenSCAP Tools
+CODE:
+# Install OpenSCAP scanner and security content
+sudo dnf install -y openscap-scanner scap-security-guide
+
+# Verify installation
+oscap --version
+ENDCODE
+
+
+# 2. Security Content
+## Locate SCAP Content
+CODE:
+# List installed SCAP content
+ls -l /usr/share/xml/scap/ssg/content/
+
+# Display information about the RHEL data stream
+oscap info /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml
+ENDCODE
+
+## List Available Profiles
+CODE:
+# Display available compliance profiles
+oscap info /usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml | less
+ENDCODE
+
+
+# 3. Compliance Scanning
+## Run Security Scan
+CODE:
+# Evaluate system compliance
+sudo oscap xccdf eval \
+--profile xccdf_org.ssgproject.content_profile_cis \
+--results results.xml \
+--report report.html \
+/usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml
+
+# Open HTML report
+firefox report.html
+ENDCODE
+
+
+# 4. Remediation
+## Generate Remediation Script
+CODE:
+# Generate Bash remediation script
+sudo oscap xccdf generate fix \
+--profile xccdf_org.ssgproject.content_profile_cis \
+--fix-type bash \
+--output remediation.sh \
+/usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml
+
+# Apply remediation
+sudo bash remediation.sh
+ENDCODE
+
+
+# 5. Verification
+## Verify Compliance Again
+CODE:
+# Run compliance scan after remediation
+sudo oscap xccdf eval \
+--profile xccdf_org.ssgproject.content_profile_cis \
+--results after-remediation.xml \
+--report after-remediation.html \
+/usr/share/xml/scap/ssg/content/ssg-rhel9-ds.xml
+ENDCODE
+
+
+# 6. Troubleshooting
+## Review Logs
+CODE:
+# View system log
+journalctl -xe
+
+# Search SELinux AVC denials
+ausearch -m AVC
+
+# Analyze SELinux alerts
+sealert -a /var/log/audit/audit.log
+ENDCODE
+
+
+# 7. EX415 Practice
+## Common Exam Tasks
+- Install OpenSCAP and SCAP Security Guide.
+- Locate installed SCAP content.
+- Identify available compliance profiles.
+- Run XCCDF compliance scans.
+- Generate HTML compliance reports.
+- Generate Bash remediation scripts.
+- Apply automated remediations.
+- Verify system compliance after remediation.
+- Troubleshoot scan failures and SELinux denials.

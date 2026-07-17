@@ -1,0 +1,138 @@
+# Firewalld
+
+## Official Documentation
+### Red Hat Security Hardening Guide
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/
+
+### Firewalld Project
+https://firewalld.org/
+
+
+# 1. Installation and Verification
+## Install and Check Service
+CODE:
+# Install Firewalld
+sudo dnf install -y firewalld
+
+# Enable service
+sudo systemctl enable --now firewalld
+
+# Verify service
+systemctl status firewalld
+
+# Verify firewall state
+firewall-cmd --state
+ENDCODE
+
+
+# 2. Zones
+## View Zones
+CODE:
+firewall-cmd --get-default-zone
+firewall-cmd --get-active-zones
+firewall-cmd --get-zones
+firewall-cmd --list-all
+ENDCODE
+
+## Change Default Zone
+CODE:
+sudo firewall-cmd --set-default-zone=public
+ENDCODE
+
+
+# 3. Services
+## View Services
+CODE:
+firewall-cmd --list-services
+firewall-cmd --get-services
+ENDCODE
+
+## Allow Services
+CODE:
+sudo firewall-cmd --add-service=http
+sudo firewall-cmd --permanent --add-service=https
+sudo firewall-cmd --reload
+ENDCODE
+
+## Remove Services
+CODE:
+sudo firewall-cmd --permanent --remove-service=http
+sudo firewall-cmd --reload
+ENDCODE
+
+
+# 4. Ports
+## Open Ports
+CODE:
+sudo firewall-cmd --add-port=8080/tcp
+sudo firewall-cmd --permanent --add-port=8443/tcp
+sudo firewall-cmd --reload
+ENDCODE
+
+## Close Ports
+CODE:
+sudo firewall-cmd --permanent --remove-port=8080/tcp
+sudo firewall-cmd --reload
+ENDCODE
+
+## View Ports
+CODE:
+firewall-cmd --list-ports
+ENDCODE
+
+
+# 5. Rich Rules
+## Create Rich Rule
+CODE:
+sudo firewall-cmd \
+--permanent \
+--add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" service name="ssh" accept"
+
+sudo firewall-cmd --reload
+ENDCODE
+
+## List Rich Rules
+CODE:
+firewall-cmd --list-rich-rules
+ENDCODE
+
+
+# 6. Runtime vs Permanent
+## Runtime Configuration
+CODE:
+sudo firewall-cmd --add-service=http
+firewall-cmd --list-services
+ENDCODE
+
+## Permanent Configuration
+CODE:
+sudo firewall-cmd --permanent --add-service=http
+sudo firewall-cmd --reload
+firewall-cmd --list-services
+ENDCODE
+
+
+# 7. Troubleshooting
+## Verify Configuration
+CODE:
+firewall-cmd --check-config
+firewall-cmd --list-all
+firewall-cmd --list-all-zones
+ENDCODE
+
+## Service Status
+CODE:
+systemctl status firewalld
+journalctl -u firewalld
+ENDCODE
+
+
+# 8. EX415 Practice
+## Common Exam Tasks
+- Configure default zone.
+- Enable and disable services.
+- Open and close ports.
+- Configure rich rules.
+- Distinguish runtime and permanent configuration.
+- Reload firewall configuration.
+- Verify firewall rules.

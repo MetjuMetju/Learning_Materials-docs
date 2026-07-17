@@ -1,0 +1,78 @@
+# Cryptography
+
+## Official Documentation
+### OpenSSL
+https://docs.openssl.org/
+
+### GnuPG
+https://gnupg.org/documentation/
+
+
+# 1. OpenSSL
+## Version and Random Data
+CODE:
+openssl version
+openssl rand -hex 32
+ENDCODE
+
+## Hash Files
+CODE:
+sha256sum file.txt
+openssl dgst -sha256 file.txt
+ENDCODE
+
+# 2. TLS Certificates
+## Generate Private Key
+CODE:
+openssl genrsa -out server.key 4096
+ENDCODE
+
+## Generate Certificate Request
+CODE:
+openssl req -new -key server.key -out server.csr
+ENDCODE
+
+## Generate Self-Signed Certificate
+CODE:
+openssl req -x509 -nodes -days 365 \
+-key server.key \
+-out server.crt
+ENDCODE
+
+## Inspect Certificate
+CODE:
+openssl x509 -in server.crt -text -noout
+ENDCODE
+
+# 3. GPG
+## Generate Key
+CODE:
+gpg --full-generate-key
+ENDCODE
+
+## List Keys
+CODE:
+gpg --list-keys
+gpg --list-secret-keys
+ENDCODE
+
+## Encrypt and Decrypt
+CODE:
+gpg -e -r username file.txt
+gpg -d file.txt.gpg
+ENDCODE
+
+## Sign and Verify
+CODE:
+gpg --sign file.txt
+gpg --verify file.txt.gpg
+ENDCODE
+
+# 4. EX415 Practice
+## Common Exam Tasks
+- Generate hashes.
+- Create TLS certificates.
+- Inspect certificates.
+- Generate GPG keys.
+- Encrypt and decrypt files.
+- Sign and verify files.

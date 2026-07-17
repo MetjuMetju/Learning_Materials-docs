@@ -1,0 +1,133 @@
+# SELinux
+
+## Official Documentation
+### Red Hat Security Hardening Guide
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/
+
+### SELinux Project Wiki
+https://github.com/SELinuxProject/selinux/wiki
+
+
+# 1. Installation and Verification
+## Check SELinux Status
+CODE:
+# Check current mode
+getenforce
+# Display detailed status
+sestatus
+
+# Display configuration
+cat /etc/selinux/config
+ENDCODE
+
+# 2. SELinux Modes
+## Temporary Mode Changes
+CODE:
+# Switch to Permissive mode
+sudo setenforce 0
+# Switch to Enforcing mode
+sudo setenforce 1
+ENDCODE
+
+
+## Permanent Mode Changes
+CODE:
+# Edit configuration
+sudo vi /etc/selinux/config
+ENDCODE
+
+# 3. Security Contexts
+## File Contexts
+CODE:
+# View file contexts
+ls -Z
+ls -lZ /var/www
+ENDCODE
+## Process Contexts
+CODE:
+# View process contexts
+ps -eZ
+ps -eZ | grep httpd
+ENDCODE
+
+# 4. File Labeling
+## Restore Default Labels
+CODE:
+sudo restorecon -Rv /var/www
+ENDCODE
+
+## Temporary Labels
+CODE:
+sudo chcon -t httpd_sys_content_t index.html
+ENDCODE
+
+## Persistent Labels
+CODE:
+sudo semanage fcontext \
+-a \
+-t httpd_sys_content_t \
+"/web(/.*)?"
+sudo restorecon -Rv /web
+sudo semanage fcontext -l
+ENDCODE
+
+# 5. SELinux Booleans
+## View Booleans
+CODE:
+getsebool -a
+getsebool -a | grep http
+ENDCODE
+
+## Modify Booleans
+CODE:
+sudo setsebool -P httpd_can_network_connect on
+getsebool httpd_can_network_connect
+ENDCODE
+
+# 6. SELinux Ports
+## View Ports
+CODE:
+sudo semanage port -l
+ENDCODE
+
+## Add Port
+CODE:
+sudo semanage port \
+-a \
+-t http_port_t \
+-p tcp 8080
+ENDCODE
+
+## Remove Port
+CODE:
+sudo semanage port \
+-d \
+-t http_port_t \
+-p tcp 8080
+ENDCODE
+
+
+# 7. Troubleshooting
+## Audit Logs
+CODE:
+sudo ausearch -m AVC
+sudo sealert -a /var/log/audit/audit.log
+sudo less /var/log/audit/audit.log
+ENDCODE
+
+## Common Recovery
+CODE:
+sudo restorecon -Rv /var/www
+ls -lZ /var/www
+getsebool -a
+ENDCODE
+
+# 8. EX415 Practice
+## Common Exam Tasks
+- Switch between Enforcing and Permissive mode.
+- Restore incorrect file labels.
+- Configure persistent file contexts.
+- Enable SELinux booleans.
+- Configure SELinux port mappings.
+- Investigate AVC denials.
+- Fix applications without disabling SELinux.

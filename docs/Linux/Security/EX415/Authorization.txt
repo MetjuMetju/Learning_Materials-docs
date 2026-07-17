@@ -1,0 +1,89 @@
+# Authorization
+
+## Official Documentation
+### Red Hat Security Hardening Guide
+https://docs.redhat.com/en/documentation/red_hat_enterprise_linux/9/html-single/security_hardening/
+
+
+# 1. sudo
+## Configuration
+CODE:
+# Edit sudoers safely
+sudo visudo
+
+# Validate configuration
+visudo -c
+
+# View current privileges
+sudo -l
+ENDCODE
+
+## sudoers.d
+CODE:
+# List additional rules
+ls -l /etc/sudoers.d/
+
+# View rule file
+sudo cat /etc/sudoers.d/*
+ENDCODE
+
+
+# 2. Password Policies
+## Password Aging
+CODE:
+# View password aging
+chage -l username
+
+# Maximum password age
+sudo chage -M 90 username
+
+# Minimum password age
+sudo chage -m 7 username
+
+# Warning days
+sudo chage -W 14 username
+ENDCODE
+
+## System Defaults
+CODE:
+# View login defaults
+cat /etc/login.defs
+
+# View password quality
+cat /etc/security/pwquality.conf
+ENDCODE
+
+
+# 3. Account Lockout
+## Failed Login Tracking
+CODE:
+# Display failed logins
+sudo faillock
+
+# Reset failures
+sudo faillock --user username --reset
+ENDCODE
+
+
+# 4. Troubleshooting
+## Verify Permissions
+CODE:
+# Verify sudo access
+sudo -l
+
+# Check login definitions
+cat /etc/login.defs
+
+# Check password policy
+cat /etc/security/pwquality.conf
+ENDCODE
+
+
+# 5. EX415 Practice
+## Common Exam Tasks
+- Configure sudo privileges.
+- Validate sudoers configuration.
+- Configure password aging.
+- Configure password quality policies.
+- Reset failed login counters.
+- Troubleshoot authorization problems.
