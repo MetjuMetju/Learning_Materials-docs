@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../Authorization/Authorization/">
+        <link rel="prev" href="../../Ansible/Ansible_KeyDB_project/">
       
       
-        <link rel="next" href="../../Firewalld/Firewalld/">
+        <link rel="next" href="../../HAPROXY_VIP_VRRP/HAPROXY_VIP_VRRP_project/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Cryptography - Learning Materials Docs</title>
+        <title>GitLab CI/CD: Automated Docker Container Build and Deployment - Learning Materials Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cryptography" class="md-skip">
+        <a href="#gitlab-cicd-automated-docker-container-build-and-deployment" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../.." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cryptography
+              GitLab CI/CD: Automated Docker Container Build and Deployment
             
           </span>
         </div>
@@ -180,7 +180,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../.." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -198,7 +198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -272,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Ansible/Ansible_KeyDB_project/" class="md-nav__link">
+      <a href="../../Ansible/Ansible_KeyDB_project/" class="md-nav__link">
         
   
   
@@ -304,18 +304,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -336,7 +338,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -351,10 +353,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../GitLab/GitLab_Pipelines_project/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    GitLab CI/CD: Automated Docker Container Build and Deployment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -370,6 +399,252 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OFFICIAL DOCUMENTATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TASK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-gitlab-server-gitlab-runner-docker-on-one-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run GitLab Server + GitLab Runner + Docker on ONE local server
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-check-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. CHECK OPERATING SYSTEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-install-gitlab-server-omnibus-gitlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. INSTALL GITLAB SERVER (Omnibus GitLab)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-install-gitlab-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. INSTALL GITLAB RUNNER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. INSTALL DOCKER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-create-gitlab-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CREATE GITLAB PROJECT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-gitlab-cicd-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE GITLAB CI/CD FILE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-hello-world-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE HELLO WORLD APPLICATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE DOCKERFILE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUSH PROJECT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-createregister-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Create/Register Runner
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIPELINE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST CONTAINER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIREWALL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINAL PROJECT FILES
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -436,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../HAPROXY_VIP_VRRP/HAPROXY_VIP_VRRP_project/" class="md-nav__link">
+      <a href="../../HAPROXY_VIP_VRRP/HAPROXY_VIP_VRRP_project/" class="md-nav__link">
         
   
   
@@ -468,20 +743,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -502,7 +775,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -517,20 +790,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -551,7 +822,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -566,20 +837,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
@@ -600,7 +869,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -618,7 +887,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../all_URLs/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/all_URLs/" class="md-nav__link">
         
   
   
@@ -693,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIDE/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/AIDE/" class="md-nav__link">
         
   
   
@@ -776,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ansible_Security/Ansible_Security/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Ansible_Security/Ansible_Security/" class="md-nav__link">
         
   
   
@@ -859,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Auditd/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Auditd/" class="md-nav__link">
         
   
   
@@ -942,7 +1211,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Authentication/Authentication/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Authentication/Authentication/" class="md-nav__link">
         
   
   
@@ -1025,7 +1294,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Authorization/Authorization/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Authorization/Authorization/" class="md-nav__link">
         
   
   
@@ -1058,20 +1327,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_7" >
         
           
           <label class="md-nav__link" for="__nav_5_1_1_7" id="__nav_5_1_1_7_label" tabindex="0">
@@ -1092,7 +1359,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_1_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1107,19 +1374,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Linux/Security/EX415/Cryptography/Cryptography/" class="md-nav__link">
         
   
   
@@ -1135,7 +1393,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1203,7 +1460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Firewalld/Firewalld/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Firewalld/Firewalld/" class="md-nav__link">
         
   
   
@@ -1286,7 +1543,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OpenSCAP/OpenSCAP/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/OpenSCAP/OpenSCAP/" class="md-nav__link">
         
   
   
@@ -1369,7 +1626,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SELinux/SELinux/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/SELinux/SELinux/" class="md-nav__link">
         
   
   
@@ -1452,7 +1709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Troubleshooting/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1558,7 +1815,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/" class="md-nav__link">
+      <a href="../../ServiceNow/" class="md-nav__link">
         
   
   
@@ -1633,7 +1890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/1_Platform_Overview_and_Navigation/Platform_Overview_and_Navigation/" class="md-nav__link">
+      <a href="../../ServiceNow/1_Platform_Overview_and_Navigation/Platform_Overview_and_Navigation/" class="md-nav__link">
         
   
   
@@ -1716,7 +1973,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/2_Instance_Configuration/Instance_Configuration/" class="md-nav__link">
+      <a href="../../ServiceNow/2_Instance_Configuration/Instance_Configuration/" class="md-nav__link">
         
   
   
@@ -1799,7 +2056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/3_Configuring_Applications_for_Collaboration/Configuring_Applications_for_Collaboration/" class="md-nav__link">
+      <a href="../../ServiceNow/3_Configuring_Applications_for_Collaboration/Configuring_Applications_for_Collaboration/" class="md-nav__link">
         
   
   
@@ -1882,7 +2139,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/4_Self_Service_and_Automation/Self_Service_and_Automation/" class="md-nav__link">
+      <a href="../../ServiceNow/4_Self_Service_and_Automation/Self_Service_and_Automation/" class="md-nav__link">
         
   
   
@@ -1965,7 +2222,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/5_Database_Management_and_Platform_Security/Database_Management_and_Platform_Security/" class="md-nav__link">
+      <a href="../../ServiceNow/5_Database_Management_and_Platform_Security/Database_Management_and_Platform_Security/" class="md-nav__link">
         
   
   
@@ -2048,7 +2305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/6_Data_Migration_and_Integration/Data_Migration_and_Integration/" class="md-nav__link">
+      <a href="../../ServiceNow/6_Data_Migration_and_Integration/Data_Migration_and_Integration/" class="md-nav__link">
         
   
   
@@ -2104,6 +2361,240 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OFFICIAL DOCUMENTATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TASK
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TASK">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#run-gitlab-server-gitlab-runner-docker-on-one-local-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Run GitLab Server + GitLab Runner + Docker on ONE local server
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-check-operating-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. CHECK OPERATING SYSTEM
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-install-gitlab-server-omnibus-gitlab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. INSTALL GITLAB SERVER (Omnibus GitLab)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-install-gitlab-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. INSTALL GITLAB RUNNER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configure_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configure:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. INSTALL DOCKER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-create-gitlab-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. CREATE GITLAB PROJECT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-gitlab-cicd-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE GITLAB CI/CD FILE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-hello-world-application" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE HELLO WORLD APPLICATION
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-dockerfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CREATE DOCKERFILE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#push-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PUSH PROJECT
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-createregister-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Create/Register Runner
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PIPELINE
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-container" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TEST CONTAINER
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#firewall" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FIREWALL
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registry" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Registry
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-project-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        FINAL PROJECT FILES
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2119,73 +2610,497 @@
 
 
 
-<h1 id="cryptography">Cryptography</h1>
-<details class="note">
-<summary>Cryptography</summary>
-<p><strong>Official Documentation</strong></p>
-<p><strong>OpenSSL</strong></p>
-<p><a href="https://docs.openssl.org/">https://docs.openssl.org/</a></p>
-<p><strong>GnuPG</strong></p>
-<p><a href="https://gnupg.org/documentation/">https://gnupg.org/documentation/</a></p>
-</details>
-<details class="note">
-<summary>1. OpenSSL</summary>
-<p><strong>Version and Random Data</strong></p>
-<div class="highlight"><pre><span></span><code>openssl version
-openssl rand -hex 32
-</code></pre></div>
-<p><strong>Hash Files</strong></p>
-<div class="highlight"><pre><span></span><code>sha256sum file.txt
-openssl dgst -sha256 file.txt
-</code></pre></div>
-</details>
-<details class="note">
-<summary>2. TLS Certificates</summary>
-<p><strong>Generate Private Key</strong></p>
-<div class="highlight"><pre><span></span><code>openssl genrsa -out server.key 4096
-</code></pre></div>
-<p><strong>Generate Certificate Request</strong></p>
-<div class="highlight"><pre><span></span><code>openssl req -new -key server.key -out server.csr
-</code></pre></div>
-<p><strong>Generate Self-Signed Certificate</strong></p>
-<div class="highlight"><pre><span></span><code>openssl req -x509 -nodes -days 365 \
--key server.key \
--out server.crt
-</code></pre></div>
-<p><strong>Inspect Certificate</strong></p>
-<div class="highlight"><pre><span></span><code>openssl x509 -in server.crt -text -noout
-</code></pre></div>
-</details>
-<details class="note">
-<summary>3. GPG</summary>
-<p><strong>Generate Key</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --full-generate-key
-</code></pre></div>
-<p><strong>List Keys</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --list-keys
-gpg --list-secret-keys
-</code></pre></div>
-<p><strong>Encrypt and Decrypt</strong></p>
-<div class="highlight"><pre><span></span><code>gpg -e -r username file.txt
-gpg -d file.txt.gpg
-</code></pre></div>
-<p><strong>Sign and Verify</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --sign file.txt
-gpg --verify file.txt.gpg
-</code></pre></div>
-</details>
-<details class="note">
-<summary>4. EX415 Practice</summary>
-<p><strong>Common Exam Tasks</strong></p>
+<h1 id="gitlab-cicd-automated-docker-container-build-and-deployment">GitLab CI/CD: Automated Docker Container Build and Deployment</h1>
+<h3 id="official-documentation">OFFICIAL DOCUMENTATION</h3>
+<pre><code>GitLab installation
+https://docs.gitlab.com/install/package/
+
+GitLab Runner installation
+https://docs.gitlab.com/runner/install/linux-repository/
+
+GitLab Runner registration
+https://docs.gitlab.com/runner/register/
+
+GitLab Rake documentation (task management and build automation tool written in Ruby)
+https://docs.gitlab.com/administration/raketasks/
+
+Predefined CI/CD variables reference
+https://docs.gitlab.com/ci/variables/predefined_variables/
+
+CI Lint API
+https://docs.gitlab.com/api/lint/
+
+Runner Executors
+https://docs.gitlab.com/runner/executors/
+
+Docker installation
+https://docs.docker.com/engine/install/
+
+Docker installation - Red Hat
+https://docs.docker.com/engine/install/rhel/
+
+Docker installation - Ubuntu
+https://docs.docker.com/engine/install/ubuntu/
+
+Docker RHEL repository
+https://download.docker.com/linux/rhel/docker-ce.repo
+
+GitLab Runner RPM repository script
+https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh
+
+GitLab Runner DEB repository script
+https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh
+</code></pre>
+<h3 id="task">TASK</h3>
+<h5 id="run-gitlab-server-gitlab-runner-docker-on-one-local-server">Run GitLab Server + GitLab Runner + Docker on ONE local server</h5>
 <ul>
-<li>Generate hashes.</li>
-<li>Create TLS certificates.</li>
-<li>Inspect certificates.</li>
-<li>Generate GPG keys.</li>
-<li>Encrypt and decrypt files.</li>
-<li>Sign and verify files.</li>
+<li>
+<p>GITLAB SERVER</p>
+<ul>
+<li>Install GitLab Server on SERVER 1</li>
+<li>Open GitLab in browser</li>
+<li>Create a new empty project</li>
 </ul>
-</details>
+</li>
+<li>
+<p>GITLAB RUNNER</p>
+<ul>
+<li>Install GitLab Runner on SERVER 2</li>
+<li>Register the Runner with your GitLab project</li>
+<li>Make sure Runner is online/available</li>
+</ul>
+</li>
+<li>
+<p>HELLO WORLD APP</p>
+<ul>
+<li>Create simple web application</li>
+<li>Create Dockerfile</li>
+</ul>
+</li>
+<li>
+<p>GITLAB CI/CD</p>
+<ul>
+<li>Create: .gitlab-ci.yml</li>
+<li>Pipeline should:<ul>
+<li>run on GitLab</li>
+<li>build Docker image</li>
+<li>tag the image</li>
+<li>optionally run/push the image</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>BASIC PIPELINE</p>
+<ul>
+<li>stage: build</li>
+<li>script:<ul>
+<li>docker build -t hello-world .</li>
+<li>docker images</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>TEST</p>
+<ul>
+<li>run the Docker container</li>
+<li>access the web application</li>
+</ul>
+</li>
+<li>
+<p>FIREWALL POSSIBLE ISSUE</p>
+<ul>
+<li>If Docker networking does not work:
+    -nft flush ruleset</li>
+<li>Then disable nftables:<ul>
+<li>systemctl disable nftables</li>
+<li>systemctl stop nftables</li>
+</ul>
+</li>
+<li>Restart Docker:<ul>
+<li>systemctl restart docker</li>
+</ul>
+</li>
+<li>Docker will recreate its firewall/network rules.</li>
+</ul>
+</li>
+</ul>
+<h3 id="1-check-operating-system">1. CHECK OPERATING SYSTEM</h3>
+<pre><code>cat /etc/os-release     # for OS name and release
+uname -m                # for CPU architecture
+</code></pre>
+<h3 id="2-install-gitlab-server-omnibus-gitlab">2. INSTALL GITLAB SERVER (Omnibus GitLab)</h3>
+<pre><code>- omnibus refers to an all-in-one software package that bundles GitLab along with all its required dependencies
+- such as Ruby, PostgreSQL, Redis, and Nginx—into a single, platform-specific Linux installer
+
+Install prerequisites:
+
+RED HAT:
+sudo dnf install -y curl policycoreutils openssh-server perl
+
+UBUNTU:
+sudo apt update
+sudo apt install -y curl policycoreutils openssh-server perl
+
+Common:
+sudo systemctl enable --now sshd
+
+Add the GitLab repository
+
+RED HAT:
+curl --location "https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.rpm.sh" | sudo bash
+UBUNTU:
+curl --location "https://packages.gitlab.com/install/repositories/gitlab/gitlab-ee/script.deb.sh" | sudo bash
+
+Install GitLab:
+
+RED HAT:
+sudo dnf install -y gitlab-ee
+UBUNTU:
+sudo apt install -y gitlab-ee
+
+ENABLE AND START GITLAB SUPERVISOR
+sudo systemctl start gitlab-runsvdir
+sudo systemctl enable gitlab-runsvdir
+sudo systemctl status gitlab-runsvdir
+sudo systemctl stop gitlab-runsvdir
+
+CHECK GITLAB COMPONENTS
+sudo gitlab-ctl status
+
+START GITLAB COMPONENTS IF NOT RUNNIG
+sudo gitlab-ctl start
+sudo gitlab-ctl status
+
+STOP GITLAB COMPONENTS:
+sudo gitlab-ctl stop
+
+RESTART GITLAB:
+sudo gitlab-ctl restart
+
+ENABLE GITLAB AT BOOT:
+sudo systemctl enable gitlab-runsvdir
+sudo systemctl status gitlab-runsvdir
+
+CHECK GITLAB ENVIRONMENT INFORMATION
+sudo gitlab-rake gitlab:env:info
+
+Common:
+sudo ss -lntp | grep -E ':80|:443'
+</code></pre>
+<h3 id="configure">Configure</h3>
+<pre><code>Check GitLab URL:
+cat /etc/hosts
+sudo grep '^external_url' /etc/gitlab/gitlab.rb
+
+Set it and reconfigure GitLab if differ:
+sudo EXTERNAL_URL="http://YOUR_SERVER_IP" gitlab-ctl reconfigure
+
+sudo gitlab-ctl status
+curl -v http://127.0.0.1/-/health
+curl -v http://127.0.0.1/-/readiness
+
+Open:
+http://YOUR_SERVER_IP
+
+CHECK FOR INITIAL PASSWORD (default user: root)
+sudo cat /etc/gitlab/initial_root_password
+
+CHECK FOR USERS
+sudo gitlab-rails console
+    User.all
+    User.pluck(:username, :email)
+    User.find_by_username('root')
+
+
+OPTIONAL: CREATE GITLAB USER
+sudo gitlab-rails console
+
+Create the user:
+user = User.new(
+username: 'user_name',
+name: 'your_name',
+email: 'user@localhost',
+password: 'CHANGE_THIS_PASSWORD',
+password_confirmation: 'CHANGE_THIS_PASSWORD'
+)
+</code></pre>
+<h3 id="3-install-gitlab-runner">3. INSTALL GITLAB RUNNER</h3>
+<pre><code>Add repository:
+
+RED HAT:
+curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.rpm.sh" -o script.rpm.sh
+sudo bash script.rpm.sh
+
+UBUNTU:
+curl -L "https://packages.gitlab.com/install/repositories/runner/gitlab-runner/script.deb.sh" -o script.deb.sh
+sudo bash script.deb.sh
+
+Install:
+
+RED HAT:
+sudo dnf install -y gitlab-runner
+rpm -q gitlab-ee
+
+UBUNTU:
+sudo apt install -y gitlab-runner
+dpkg -l | grep gitlab
+
+START RUNNER:
+sudo systemctl start gitlab-runner
+
+STOP RUNNER:
+sudo systemctl stop gitlab-runner
+
+RESTART RUNNER:
+sudo systemctl restart gitlab-runner
+
+ENABLE RUNNER AT BOOT:
+sudo systemctl enable gitlab-runner
+sudo systemctl status gitlab-runner
+</code></pre>
+<h3 id="configure_1">Configure:</h3>
+<pre><code>Add gitlab-runner to Docker group
+sudo usermod -aG docker gitlab-runner
+sudo systemctl restart gitlab-runner
+
+Check:
+id gitlab-runner
+getent group docker
+sudo -u gitlab-runner docker ps
+</code></pre>
+<h3 id="4-install-docker">4. INSTALL DOCKER</h3>
+<pre><code>RED HAT:
+
+sudo dnf -y install dnf-plugins-core
+sudo dnf config-manager --add-repo https://download.docker.com/linux/rhel/docker-ce.repo
+
+UBUNTU:
+
+sudo apt update
+sudo apt install -y ca-certificates curl
+
+Add the official Docker Ubuntu repository:
+https://docs.docker.com/engine/install/ubuntu/
+
+Install:
+
+RED HAT:
+sudo dnf install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+UBUNTU:
+sudo apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+Common:
+
+sudo systemctl enable --now docker
+sudo systemctl status docker
+docker --version
+</code></pre>
+<h3 id="5-create-gitlab-project">5. CREATE GITLAB PROJECT</h3>
+<pre><code>Files:
+index.html
+Dockerfile
+.gitlab-ci.yml
+
+In Web UI - New Project:
+Group name: lab
+Project name: hello-world
+
+in CLI - Create the Git repository
+git init
+
+git config --global user.name "AUTHOR_NAME" # commit identity
+git config --global user.email "YOUR_EMAIL"
+git config --global user.name
+git config --global user.email
+
+git status
+git remote -v
+git remote add origin http://YOUR_GITLAB_URL/lab/hello-world.git
+git remote add origin http://192.168.0.215/lab/hello-world.git
+
+git status
+git ls-files .gitlab-ci.yml
+git log --oneline --all -- .gitlab-ci.yml
+git remote -v
+
+git add .
+git commit -m "Initial hello world application"
+git branch          # or: git branch --show-current
+git branch -M main  # -M: forcefully rename the current branch
+git push -u origin main
+</code></pre>
+<h3 id="create-gitlab-cicd-file">CREATE GITLAB CI/CD FILE</h3>
+<p>.gitlab-ci.yml:</p>
+<div class="highlight"><pre><span></span><code>stages:
+- build
+
+build:
+  stage: build
+  script:
+    - docker build -t hello-world:$CI_COMMIT_SHORT_SHA .
+
+# NOTES:
+# - CI_COMMIT_SHORT_SHA - Availability: Pre-pipeline - the first eight characters of CI_COMMIT_SHA
+# - identifier for the Git commit that triggered the pipeline
+</code></pre></div>
+<h3 id="create-hello-world-application">CREATE HELLO WORLD APPLICATION</h3>
+<p>index.html</p>
+<div class="highlight"><pre><span></span><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Hello World&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello World from GitLab CI/CD!&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div>
+<h3 id="create-dockerfile">CREATE DOCKERFILE</h3>
+<p>Dockerfile:</p>
+<div class="highlight"><pre><span></span><code>FROM nginx:alpine
+COPY index.html /usr/share/nginx/html/index.html
+EXPOSE 80
+</code></pre></div>
+<h3 id="push-project">PUSH PROJECT</h3>
+<pre><code>git init
+git add .
+git commit -m "Initial hello world application"
+git branch -M main
+git remote add origin YOUR_GITLAB_REPOSITORY_URL
+git push -u origin main
+</code></pre>
+<h3 id="6-createregister-runner">6. Create/Register Runner</h3>
+<pre><code>Web UI
+
+    Check Runner assignment in GitLab Web UI
+    Open: lab / hello-world
+    -&gt; Settings
+    -&gt; CI/CD
+    -&gt; Runners
+    Then create/register Runner for lab/hello-world
+
+Check Configuration file
+    -&gt; Code
+    -&gt; Repository
+    -&gt; .gitlab-ci.yml
+
+Check pipeline:
+    Project
+    -&gt; Build
+    -&gt; Pipelines
+    Click status icon -&gt; build to see the actual Runner output
+
+Check/Create GitLab Personal Access Token (PAT)
+    Avatar / profile
+    -&gt; Edit profile
+    -&gt; Access
+    -&gt; Personal access tokens
+
+    Generate legacy token or Fine-grained personal access token
+    - Legacy token:
+        - is scoped to all groups and projects with broad permissions to resources.
+    - Fine-grained personal access token:
+        - give you granular control over the specific resources and actions available to the token.
+
+    - For creating a pipeline via the REST API — the minimum scope you need is:
+        - api
+
+Check project ID
+    Project
+    -&gt; Settings
+    -&gt; General
+    -&gt; Project ID
+
+Create new Runner from Web UI
+    Tags: leave empty
+    Run untagged jobs: ENABLED
+    Runner description: hello-world-runner
+    Paused: DISABLED
+    Protected: DISABLED
+    Lock to current projects: ENABLED
+    Maximum job timeout: leave empty
+
+    NEXT SCREEN
+    Register "hello-world-runner" runner
+    Platform - Operating systems - Linux
+    Copy and paste the following command into your command line to register the runner.
+
+    After running this command (by sudo it would have registered the Runner in system mode):
+
+    Enter the GitLab instance URL
+    Enter a name for the runner. This is stored only in the local config.toml file
+    Enter an executor: docker
+    Enter the default Docker image (for example, ruby:3.3): docker:cli   
+    NOTE: Configuration (with the authentication token) was saved in "/home/&lt;user_name&gt;/.gitlab-runner/config.toml"
+
+
+Check Runner from CLI
+
+    Runner configuration file (config.toml) has:
+    executor = "docker"
+    [runners.docker]
+    image = "docker:cli"
+    privileged = true
+    volumes = ["/var/run/docker.sock:/var/run/docker.sock", "/cache"]
+    To view the runner, go to Project › CI/CD Settings › Runners
+
+    sudo systemctl restart gitlab-runner
+    sudo systemctl status gitlab-runner --no-pager
+    sudo gitlab-runner verify
+
+    Manually verify that the runner is available to pick up jobs
+    sudo systemctl start gitlab-runner
+    sudo gitlab-runner run --config /etc/gitlab-runner/config.toml
+
+    sudo gitlab-runner verify
+    sudo gitlab-runner list
+    sudo journalctl -u gitlab-runner -f
+
+    Check GitLab access token
+    sudo cat /etc/gitlab-runner/config.toml
+</code></pre>
+<h3 id="pipeline">PIPELINE</h3>
+<pre><code>git push
+-&gt; GitLab Server
+-&gt; GitLab Runner
+-&gt; .gitlab-ci.yml
+-&gt; docker build -&gt; Docker image
+</code></pre>
+<h3 id="test-container">TEST CONTAINER</h3>
+<pre><code>docker images
+docker run -d --name hello-world-test -p 8080:80 hello-world:TAG
+docker ps
+docker ps --format 'table {{.ID}}\t{{.Image}}\t{{.Ports}}\t{{.Names}}'
+curl http://localhost:8080
+</code></pre>
+<h3 id="firewall">FIREWALL</h3>
+<pre><code>sudo nft list ruleset
+
+Only if Docker networking is blocked:
+sudo nft flush ruleset
+sudo systemctl stop nftables.service
+sudo systemctl disable nftables.service
+sudo systemctl restart docker.service
+</code></pre>
+<h3 id="registry">Registry</h3>
+<pre><code>sudo vi /etc/gitlab/gitlab.rb
+registry_external_url 'https://registry.example.com'
+sudo gitlab-ctl reconfigure
+sudo gitlab-ctl status
+
+sudo grep -R "registry_external_url" /etc/gitlab/gitlab.rb
+sudo gitlab-ctl status | grep registry
+cat /etc/hosts
+</code></pre>
+<h3 id="final-project-files">FINAL PROJECT FILES</h3>
+<pre><code>hello-world/
+index.html
+Dockerfile
+.gitlab-ci.yml
+</code></pre>
 
 
 
@@ -2235,10 +3150,10 @@ gpg --verify file.txt.gpg
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

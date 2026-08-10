@@ -9,25 +9,25 @@
       
       
       
-        <link rel="prev" href="../../Authorization/Authorization/">
+        <link rel="prev" href="../../GitLab/GitLab_Pipelines_project/">
       
       
-        <link rel="next" href="../../Firewalld/Firewalld/">
+        <link rel="next" href="../../Linux/Security/EX415/all_URLs/">
       
       
         
       
       
-      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
-        <title>Cryptography - Learning Materials Docs</title>
+        <title>VIP with VRRP and used for HAProxy notes - Learning Materials Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
       
 
@@ -46,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/custom.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/custom.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cryptography" class="md-skip">
+        <a href="#vip-with-vrrp-and-used-for-haproxy-notes" class="md-skip">
           Skip to content
         </a>
       
@@ -82,7 +82,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../.." title="Learning Materials Docs" class="md-header__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Cryptography
+              VIP with VRRP and used for HAProxy notes
             
           </span>
         </div>
@@ -180,7 +180,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
+    <a href="../.." title="Learning Materials Docs" class="md-nav__button md-logo" aria-label="Learning Materials Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -198,7 +198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -272,7 +272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../Ansible/Ansible_KeyDB_project/" class="md-nav__link">
+      <a href="../../Ansible/Ansible_KeyDB_project/" class="md-nav__link">
         
   
   
@@ -354,7 +354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../GitLab/GitLab_Pipelines_project/" class="md-nav__link">
+      <a href="../../GitLab/GitLab_Pipelines_project/" class="md-nav__link">
         
   
   
@@ -386,18 +386,20 @@
       
   
   
+    
   
   
+  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -418,7 +420,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -433,10 +435,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../HAPROXY_VIP_VRRP/HAPROXY_VIP_VRRP_project/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VIP with VRRP and used for HAProxy notes
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -452,6 +481,125 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-documentations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official Documentations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrrp-virtual-router-redundancy-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRRP (Virtual Router Redundancy Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-keepalived-and-haproxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install keepalived and haproxy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-dedicated-user-on-both-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the dedicated user (on both servers):
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-for-any-existing-vrrp-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check for any existing VRRP IDs:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-backup-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On Backup server:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On Master:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful commands:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -468,20 +616,18 @@
       
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -502,7 +648,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
@@ -517,20 +663,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -551,7 +695,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -566,20 +710,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1" >
         
           
           <label class="md-nav__link" for="__nav_5_1_1" id="__nav_5_1_1_label" tabindex="0">
@@ -600,7 +742,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_5_1_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_1">
             <span class="md-nav__icon md-icon"></span>
             
@@ -618,7 +760,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../all_URLs/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/all_URLs/" class="md-nav__link">
         
   
   
@@ -693,7 +835,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../AIDE/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/AIDE/" class="md-nav__link">
         
   
   
@@ -776,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Ansible_Security/Ansible_Security/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Ansible_Security/Ansible_Security/" class="md-nav__link">
         
   
   
@@ -859,7 +1001,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Auditd/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Auditd/" class="md-nav__link">
         
   
   
@@ -942,7 +1084,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Authentication/Authentication/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Authentication/Authentication/" class="md-nav__link">
         
   
   
@@ -1025,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Authorization/Authorization/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Authorization/Authorization/" class="md-nav__link">
         
   
   
@@ -1058,20 +1200,18 @@
                 
   
   
-    
   
   
-  
     
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_7" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1_1_7" >
         
           
           <label class="md-nav__link" for="__nav_5_1_1_7" id="__nav_5_1_1_7_label" tabindex="0">
@@ -1092,7 +1232,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_7_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_5_1_1_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_5_1_1_7">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1107,19 +1247,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../Linux/Security/EX415/Cryptography/Cryptography/" class="md-nav__link">
         
   
   
@@ -1135,7 +1266,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -1203,7 +1333,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Firewalld/Firewalld/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Firewalld/Firewalld/" class="md-nav__link">
         
   
   
@@ -1286,7 +1416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../OpenSCAP/OpenSCAP/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/OpenSCAP/OpenSCAP/" class="md-nav__link">
         
   
   
@@ -1369,7 +1499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../SELinux/SELinux/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/SELinux/SELinux/" class="md-nav__link">
         
   
   
@@ -1452,7 +1582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Troubleshooting/" class="md-nav__link">
+      <a href="../../Linux/Security/EX415/Troubleshooting/" class="md-nav__link">
         
   
   
@@ -1558,7 +1688,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/" class="md-nav__link">
+      <a href="../../ServiceNow/" class="md-nav__link">
         
   
   
@@ -1633,7 +1763,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/1_Platform_Overview_and_Navigation/Platform_Overview_and_Navigation/" class="md-nav__link">
+      <a href="../../ServiceNow/1_Platform_Overview_and_Navigation/Platform_Overview_and_Navigation/" class="md-nav__link">
         
   
   
@@ -1716,7 +1846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/2_Instance_Configuration/Instance_Configuration/" class="md-nav__link">
+      <a href="../../ServiceNow/2_Instance_Configuration/Instance_Configuration/" class="md-nav__link">
         
   
   
@@ -1799,7 +1929,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/3_Configuring_Applications_for_Collaboration/Configuring_Applications_for_Collaboration/" class="md-nav__link">
+      <a href="../../ServiceNow/3_Configuring_Applications_for_Collaboration/Configuring_Applications_for_Collaboration/" class="md-nav__link">
         
   
   
@@ -1882,7 +2012,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/4_Self_Service_and_Automation/Self_Service_and_Automation/" class="md-nav__link">
+      <a href="../../ServiceNow/4_Self_Service_and_Automation/Self_Service_and_Automation/" class="md-nav__link">
         
   
   
@@ -1965,7 +2095,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/5_Database_Management_and_Platform_Security/Database_Management_and_Platform_Security/" class="md-nav__link">
+      <a href="../../ServiceNow/5_Database_Management_and_Platform_Security/Database_Management_and_Platform_Security/" class="md-nav__link">
         
   
   
@@ -2048,7 +2178,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../ServiceNow/6_Data_Migration_and_Integration/Data_Migration_and_Integration/" class="md-nav__link">
+      <a href="../../ServiceNow/6_Data_Migration_and_Integration/Data_Migration_and_Integration/" class="md-nav__link">
         
   
   
@@ -2104,6 +2234,113 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#official-documentations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Official Documentations
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrrp-virtual-router-redundancy-protocol" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        VRRP (Virtual Router Redundancy Protocol)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#install-keepalived-and-haproxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Install keepalived and haproxy
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-the-dedicated-user-on-both-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create the dedicated user (on both servers):
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#check-for-any-existing-vrrp-ids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Check for any existing VRRP IDs:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-backup-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On Backup server:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#on-master" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        On Master:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Notes:
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#useful-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful commands:
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2119,73 +2356,196 @@
 
 
 
-<h1 id="cryptography">Cryptography</h1>
-<details class="note">
-<summary>Cryptography</summary>
-<p><strong>Official Documentation</strong></p>
-<p><strong>OpenSSL</strong></p>
-<p><a href="https://docs.openssl.org/">https://docs.openssl.org/</a></p>
-<p><strong>GnuPG</strong></p>
-<p><a href="https://gnupg.org/documentation/">https://gnupg.org/documentation/</a></p>
-</details>
-<details class="note">
-<summary>1. OpenSSL</summary>
-<p><strong>Version and Random Data</strong></p>
-<div class="highlight"><pre><span></span><code>openssl version
-openssl rand -hex 32
-</code></pre></div>
-<p><strong>Hash Files</strong></p>
-<div class="highlight"><pre><span></span><code>sha256sum file.txt
-openssl dgst -sha256 file.txt
-</code></pre></div>
-</details>
-<details class="note">
-<summary>2. TLS Certificates</summary>
-<p><strong>Generate Private Key</strong></p>
-<div class="highlight"><pre><span></span><code>openssl genrsa -out server.key 4096
-</code></pre></div>
-<p><strong>Generate Certificate Request</strong></p>
-<div class="highlight"><pre><span></span><code>openssl req -new -key server.key -out server.csr
-</code></pre></div>
-<p><strong>Generate Self-Signed Certificate</strong></p>
-<div class="highlight"><pre><span></span><code>openssl req -x509 -nodes -days 365 \
--key server.key \
--out server.crt
-</code></pre></div>
-<p><strong>Inspect Certificate</strong></p>
-<div class="highlight"><pre><span></span><code>openssl x509 -in server.crt -text -noout
-</code></pre></div>
-</details>
-<details class="note">
-<summary>3. GPG</summary>
-<p><strong>Generate Key</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --full-generate-key
-</code></pre></div>
-<p><strong>List Keys</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --list-keys
-gpg --list-secret-keys
-</code></pre></div>
-<p><strong>Encrypt and Decrypt</strong></p>
-<div class="highlight"><pre><span></span><code>gpg -e -r username file.txt
-gpg -d file.txt.gpg
-</code></pre></div>
-<p><strong>Sign and Verify</strong></p>
-<div class="highlight"><pre><span></span><code>gpg --sign file.txt
-gpg --verify file.txt.gpg
-</code></pre></div>
-</details>
-<details class="note">
-<summary>4. EX415 Practice</summary>
-<p><strong>Common Exam Tasks</strong></p>
+<h1 id="vip-with-vrrp-and-used-for-haproxy-notes">VIP with VRRP and used for HAProxy notes</h1>
+<h3 id="official-documentations">Official Documentations</h3>
+<p>https://www.keepalived.org/documentation/keepalived-conf/
+<br>
+https://www.rfc-editor.org/rfc/rfc9568.html
+<br>
+https://www.haproxy.com/downloads
+<br>
+https://www.haproxy.com/documentation/haproxy-configuration-tutorials/proxying-essentials/configuration-basics/
+<br></p>
+<h3 id="vrrp-virtual-router-redundancy-protocol">VRRP (Virtual Router Redundancy Protocol)</h3>
 <ul>
-<li>Generate hashes.</li>
-<li>Create TLS certificates.</li>
-<li>Inspect certificates.</li>
-<li>Generate GPG keys.</li>
-<li>Encrypt and decrypt files.</li>
-<li>Sign and verify files.</li>
+<li>provides a virtual/floating IP (VIP)</li>
+<li>VIP moves between MASTER and BACKUP</li>
+<li>used for high availability / failover</li>
 </ul>
-</details>
+<h3 id="install-keepalived-and-haproxy">Install keepalived and haproxy</h3>
+<pre><code>sudo apt update
+sudo apt install -y keepalived haproxy
+keepalived --version
+haproxy -v
+ls -l /etc/keepalived
+</code></pre>
+<h3 id="create-the-dedicated-user-on-both-servers">Create the dedicated user (on both servers):</h3>
+<div class="highlight"><pre><span></span><code>sudo useradd --system --no-create-home --shell /usr/sbin/nologin keepalived_script
+getent passwd keepalived_script
+</code></pre></div>
+<h3 id="check-for-any-existing-vrrp-ids">Check for any existing VRRP IDs:</h3>
+<pre><code>sudo tcpdump -ni eth0 'ip proto 112'
+</code></pre>
+<h3 id="on-backup-server">On Backup server:</h3>
+<div class="highlight"><pre><span></span><code>    sudo systemctl stop haproxy     # on backup one
+    sudo systemctl start haproxy    # after started on master
+    ls -l /usr/bin/systemctl
+    /usr/bin/systemctl is-active --quiet haproxy
+    echo $?
+
+
+### /etc/keepalived/keepalived.conf
+
+global_defs {
+    router_id STARTER_BACKUP
+    enable_script_security
+}
+vrrp_script chk_haproxy {
+    script &quot;/usr/bin/systemctl is-active --quiet haproxy&quot;
+    interval 2
+    weight -100
+}
+vrrp_instance VI_1 {
+    state BACKUP
+    interface eth0
+    virtual_router_id 51
+    priority 100
+    advert_int 1
+    unicast_src_ip 37.27.32.56
+    unicast_peer {
+        204.168.132.77
+    }
+    authentication {
+        auth_type PASS
+        auth_pass test1234
+    }
+    virtual_ipaddress {
+        10.250.0.224/32
+    }
+    track_script {
+        chk_haproxy
+    }
+}
+
+sudo keepalived -t -f /etc/keepalived/keepalived.conf
+</code></pre></div>
+<h3 id="on-master">On Master:</h3>
+<div class="highlight"><pre><span></span><code>sudo systemctl start haproxy
+pgrep -x haproxy
+command -v systemctl
+ls -l /usr/bin/systemctl
+/usr/bin/systemctl is-active --quiet haproxy
+echo $?
+
+### /etc/keepalived/keepalived.conf
+global_defs {
+    router_id KLAB_MASTER
+    enable_script_security
+}
+vrrp_script chk_haproxy {
+    script &quot;/usr/bin/systemctl is-active --quiet haproxy&quot;
+    interval 2
+    weight -100
+}
+vrrp_instance VI_1 {
+    state MASTER
+    interface eth0
+    virtual_router_id 51
+    priority 150
+    advert_int 1
+    unicast_src_ip 204.168.132.77
+    unicast_peer {
+        37.27.32.56
+    }
+    authentication {
+        auth_type PASS
+        auth_pass test1234
+    }
+    virtual_ipaddress {
+        10.250.0.224/32
+    }
+    track_script {
+        chk_haproxy
+    }
+}
+
+sudo keepalived -t -f /etc/keepalived/keepalived.conf
+sudo systemctl enable --now keepalived
+ip addr show eth0 | grep 10.250.0.224
+sudo journalctl -u keepalived --no-pager
+sudo journalctl -u keepalived --since &quot;2 minutes ago&quot; --no-pager
+sudo systemctl stop haproxy
+sudo systemctl start haproxy
+sudo systemctl status haproxy
+</code></pre></div>
+<h3 id="notes">Notes:</h3>
+<div class="highlight"><pre><span></span><code>- interval 2 = HAProxy check interval - check HAProxy every 2 seconds
+- advert_int 1 = VRRP advertisement interval - MASTER sends VRRP &quot;I&#39;m alive&quot; every 1 second
+
+- vrrp_script chk_haproxy  -&gt; defines the check
+- track_script chk_haproxy -&gt; attaches the check to VRRP
+
+- The IPv4 multicast address as assigned by the IANA for VRRP is: 224.0.0.18
+- This is a link-local scope multicast address.
+- Routers MUST NOT forward a datagram with this destination address, regardless of its TTL.
+https://www.rfc-editor.org/rfc/rfc9568.html
+VRRP = IP protocol number 112 (Layer 3 - Network in ISO)
+</code></pre></div>
+<h3 id="useful-commands">Useful commands:</h3>
+<div class="highlight"><pre><span></span><code>sudo systemctl stop haproxy
+sudo systemctl stop keepalived
+ip neigh show
+- the Linux ARP/neighbor table. It shows which IP addresses the machine has recently resolved to MAC addresses on directly reachable networks.
+ip route get 172.31.1.1
+ping -c 3 37.27.32.56
+ping -c 3 204.168.132.77
+
+ip addr show eth0
+
+### on server 1:
+sudo tcpdump -ni eth0 &#39;host 37.27.32.56 and ip proto 112&#39;
+### on server 2:
+sudo tcpdump -ni eth0 &#39;host 204.168.132.77 and ip proto 112&#39;
+
+ip addr
+ip -br addr
+ip addr show eth0
+ip route
+sudo tcpdump -ni eth0 &#39;ip proto 112&#39;
+sudo systemctl cat keepalived
+sudo cat /etc/keepalived/keepalived.conf 2&gt;/dev/null
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+sudo ss -lntp | grep haproxy
+
+# Check keepalived
+systemctl status keepalived --no-pager
+journalctl -u keepalived --no-pager
+
+# Check HAProxy
+systemctl status haproxy --no-pager
+journalctl -u haproxy --no-pager
+
+# Check VIP
+ip addr show
+
+# Check keepalived config
+cat /etc/keepalived/keepalived.conf
+
+# Check HAProxy config
+cat /etc/haproxy/haproxy.cfg
+
+# Check VRRP traffic
+tcpdump -ni any &#39;ip proto 112&#39;
+
+# Test HAProxy failover
+systemctl stop haproxy
+
+# Start HAProxy again
+systemctl start haproxy
+
+# Test keepalived failover
+systemctl stop keepalived
+</code></pre></div>
 
 
 
@@ -2235,10 +2595,10 @@ gpg --verify file.txt.gpg
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
