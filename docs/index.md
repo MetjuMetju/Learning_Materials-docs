@@ -6,4 +6,4 @@ Welcome to the Learning Materials documentation.
 - [GitLab](GitLab/)
 - [HAProxy VIP VRRP](HAPROXY_VIP_VRRP/)
 - [Linux](Linux/)
-- [ServiceNow](ServiceNow/)
+- [ServiceNow](ServiceNow/index.md)
