@@ -2,5 +2,8 @@
 
 Welcome to the Learning Materials documentation.
 
-- [ServiceNow](ServiceNow/)
+- [Ansible](Ansible/)
+- [GitLab](GitLab/)
+- [HAProxy VIP VRRP](HAPROXY_VIP_VRRP/)
 - [Linux](Linux/)
+- [ServiceNow](ServiceNow/)

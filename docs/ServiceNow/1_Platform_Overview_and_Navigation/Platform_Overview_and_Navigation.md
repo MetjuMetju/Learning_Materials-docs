@@ -1,12 +1,15 @@
 # Platform Overview and Navigation
 
 #### What is ServiceNow?
-ServiceNow is a cloud-based platform that provides digital workflows for IT, employees, customers, and business processes.
+ServiceNow is a cloud-based platform (workspace) that provides digital workflows for IT, employees, customers, and business processes.
+
+Cloud-based workspace where tasks like IT tickets, HR requests, and customer issues are managed in one place. Instead of juggling emails, spreadsheets, and separate tools, ServiceNow connects people, processes, and technology in a single workspace where work flows easily. What makes it different is that it is fully customizable, with low-code features, real-time data, and AI automation that transform workflows.
 
 #### ServiceNow Instance
 A unique ServiceNow environment with its own database, applications, users, configurations, and customizations.
 
 Examples:
+
 - Development instance
 - Test instance
 - Production instance
